@@ -1,21 +1,24 @@
 import TourCard from "./components/TourCard";
 import Container from '@material-ui/core/Container';
- import Grid from '@material-ui/core/Grid';
+ import Grid from '@mui/material/Grid';
+import ResponsiveAppBar from "./components/AppBar";
+
 
 
 function App() {
   return (
     <div className="App">
+  <ResponsiveAppBar/>
     <Container>
 
-    <Grid container spacing ={10}>
+    <Grid  marginTop={.5} container spacing ={10}>
     <TourCard/>
     <TourCard/> 
      <TourCard/> 
      <TourCard/>
      <TourCard/>
      <TourCard/>
-     <TourCard/>
+   
       
     
 
