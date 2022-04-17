@@ -1,30 +1,26 @@
-import TourCard from "./components/TourCard";
-import Container from '@material-ui/core/Container';
- import Grid from '@mui/material/Grid';
+import Home from "./pages/Home";
+import { Routes,Route, BrowserRouter} from "react-router-dom";
 import ResponsiveAppBar from "./components/AppBar";
-
-
+import  Tour from "./pages/Tour" ;
 
 function App() {
   return (
-    <div className="App">
-  <ResponsiveAppBar/>
-    <Container>
-
-    <Grid  marginTop={.5} container spacing ={10}>
-    <TourCard/>
-    <TourCard/> 
-     <TourCard/> 
-     <TourCard/>
-     <TourCard/>
-     <TourCard/>
+    <div>
    
-      
+<BrowserRouter>
+<ResponsiveAppBar/>
+<Routes>
+    <Route path="/home" element ={<Home/>}/>
+    </Routes>
+    <Routes>
+    <Route path="/tours" element ={<Tour/>}/>
+    </Routes>
+</BrowserRouter>
     
-
-    </Grid>
-    </Container>
+   
     </div>
+    
+  
   );
 }
 
